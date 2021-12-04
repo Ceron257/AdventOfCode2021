@@ -1,5 +1,3 @@
-import numpy as np
-
 with open("input-4.txt", "r") as f:
   input = list(map(int, f.readline().strip().split(',')))
   gridNumbers = [line.strip() for line in f.readlines() if line.strip() != '']
