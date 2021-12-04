@@ -1,12 +1,12 @@
 with open("input-4.txt", "r") as f:
   input = list(map(int, f.readline().strip().split(',')))
-  gridNumbers = [line.strip() for line in f.readlines() if line.strip() != '']
+  gridNumbers = [lineStripped for line in f.readlines() if (lineStripped := line.strip()) != '']
 
 class Grid:
   def __init__(self, grid):
     self.grid = []
     for line in grid:
-      elements = [l.strip() for l in line.split(' ') if l.strip() != '']
+      elements = [l for l in line.split()]
       self.grid.append(list(map(int, elements)))
     self.marked = []
     self.last = None
